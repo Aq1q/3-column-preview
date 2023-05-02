@@ -1,0 +1,129 @@
+//Primary colors
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+//Neutral colors
+
+$transparent-white-par: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+    height: 100%;
+    width: 100%;
+    background-color: $very-light-gray;
+    p{
+        font-size: 15px;
+        color: $transparent-white-par;
+    }
+    h2{
+        color: $very-light-gray ;
+    }
+}
+
+.container {
+    width: 327px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1326px;
+    border-radius: 15px;
+    overflow: scroll;
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: calc(100%/3);
+        padding: 48px 31px 48px 49px;
+        h2{
+            font-size: 2.5em;
+            font-family: 'Big Shoulders Display', sans-serif;
+        }
+        p{
+            font-family: 'Lexend Deca', sans-serif;
+            line-height: 1.5em;
+            font-size: 1em;
+        }
+        .btn {
+            border: 1px solid white;
+            border-radius: 30px;
+            font-family: 'Lexenda Deca', sans-serif;
+            height: 47px;
+            width: 147px;
+        }
+        .btn:hover{
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+    #sedan {
+        background-color: $bright-orange;
+        border-radius: 5px 5px 0 0;
+        .btn {
+            color: $bright-orange;
+        }
+        .btn:hover {
+            color: white;
+        }
+    }
+    #suv{
+        background-color: $dark-cyan;
+        .btn{
+            color: $dark-cyan;
+        }
+        .btn:hover {
+            color: white;
+        }
+    }
+    #luxury{
+        background-color: $very-dark-cyan;
+        border-radius: 0 0 5px 5px;
+        .btn{
+            color: $very-dark-cyan;
+        }
+        .btn:hover {
+            color: white;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    body{
+        height: 1502px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body{
+        height: 100%;
+    }
+    .container{
+        height: 501px;
+        width: 921px;
+        flex-direction: row;
+    }
+    .box{
+        height: 100% !important; 
+        p{
+            padding-bottom: 50px !important;
+        }
+    }
+    #sedan{
+        border-radius: 10px 0 0 10px !important;
+    }
+    #luxury{
+        border-radius: 0 10px 10px 0 !important;
+    }
+}

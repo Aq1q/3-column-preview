@@ -89,6 +89,12 @@ body h2 {
   color: white;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.5em;
+}
+
 @media screen and (min-width: 375px) {
   body {
     height: 1502px;

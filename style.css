@@ -90,9 +90,9 @@ body h2 {
 }
 
 .attribution {
-  position: absolute;
-  bottom: 5px;
-  font-size: 0.5em;
+  position: absolute !important;
+  bottom: 5px !important;
+  font-size: 0.5em !important;
 }
 
 @media screen and (min-width: 375px) {
